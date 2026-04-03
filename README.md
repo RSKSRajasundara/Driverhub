@@ -14,25 +14,57 @@ A complete, production-ready vehicle rental platform built with Next.js 16, Mong
 | **[IMPLEMENTATION_CHECKLIST.md](./docs/IMPLEMENTATION_CHECKLIST.md)** | Detailed completion status |
 | **[COMPLETION_SUMMARY.md](./docs/COMPLETION_SUMMARY.md)** | Project completion report |
 
-## 🚀 Getting Started (3 Steps)
+## 🚀 Quick Setup (For New Laptops)
 
-### 1. Clone & Install
+Share this with anyone setting up the project for the first time.
+
+### What they need first
+- Node.js (v20 or newer): https://nodejs.org
+- Git: https://git-scm.com
+- A MongoDB connection string (Atlas or local)
+
+### 1. Download and open project
 ```bash
+git clone <your-repo-url>
+cd <your-project-folder>
+```
+
+### 2. Install pnpm and project packages
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
 pnpm install
 ```
 
-### 2. Configure Environment
+### 3. Add environment file
+
+Create `.env.local` from `.env.example`.
+
+Use this command on Mac/Linux:
 ```bash
 cp .env.example .env.local
-# Edit .env.local with your MongoDB URI and JWT secret
 ```
 
-### 3. Start Development
+Use this command on Windows PowerShell:
+```powershell
+Copy-Item .env.example .env.local
+```
+
+Then open `.env.local` and update:
+- `MONGODB_URI`
+- `JWT_SECRET`
+
+### 4. Run the app
 ```bash
 pnpm dev
 ```
 
-Visit http://localhost:3000 - You're live!
+Open http://localhost:3000
+
+### Done?
+If the home page loads, setup is complete.
+
+If something fails, check [SETUP.md](./docs/SETUP.md).
 
 ## ✨ What's Included
 
@@ -263,10 +295,10 @@ Complete testing guide provided in [TEST_GUIDE.md](./docs/TEST_GUIDE.md) with:
 ## 📞 Support
 
 ### Documentation
-- See [SETUP.md](./SETUP.md) for setup issues
-- See [QUICKSTART.md](./QUICKSTART.md) for quick start
-- See [TEST_GUIDE.md](./TEST_GUIDE.md) for testing help
-- See [ARCHITECTURE.md](./ARCHITECTURE.md) for technical details
+- See [SETUP.md](./docs/SETUP.md) for setup issues
+- See [QUICKSTART.md](./docs/QUICKSTART.md) for quick start
+- See [TEST_GUIDE.md](./docs/TEST_GUIDE.md) for testing help
+- See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for technical details
 
 ### Troubleshooting
 1. MongoDB connection issues → Check SETUP.md
@@ -317,7 +349,7 @@ Everything is ready for production deployment:
 5. ✅ Production-optimized code
 
 **Next steps:**
-1. Review [QUICKSTART.md](./QUICKSTART.md)
+1. Review [QUICKSTART.md](./docs/QUICKSTART.md)
 2. Set up MongoDB
 3. Configure environment
 4. Run locally
@@ -329,19 +361,19 @@ Everything is ready for production deployment:
 ## 📚 Full Documentation Index
 
 ### Getting Started
-- [QUICKSTART.md](./QUICKSTART.md) - Start here (5 minutes)
-- [SETUP.md](./SETUP.md) - Complete setup guide
+- [QUICKSTART.md](./docs/QUICKSTART.md) - Start here (5 minutes)
+- [SETUP.md](./docs/SETUP.md) - Complete setup guide
 
 ### Technical Documentation
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - System design
-- [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md) - Features & overview
+- [ARCHITECTURE.md](./docs/ARCHITECTURE.md) - System design
+- [PROJECT_SUMMARY.md](./docs/PROJECT_SUMMARY.md) - Features & overview
 
 ### Testing & Verification
-- [TEST_GUIDE.md](./TEST_GUIDE.md) - Testing procedures
-- [IMPLEMENTATION_CHECKLIST.md](./IMPLEMENTATION_CHECKLIST.md) - Completion status
+- [TEST_GUIDE.md](./docs/TEST_GUIDE.md) - Testing procedures
+- [IMPLEMENTATION_CHECKLIST.md](./docs/IMPLEMENTATION_CHECKLIST.md) - Completion status
 
 ### Project Status
-- [COMPLETION_SUMMARY.md](./COMPLETION_SUMMARY.md) - Final report
+- [COMPLETION_SUMMARY.md](./docs/COMPLETION_SUMMARY.md) - Final report
 
 ---
 
